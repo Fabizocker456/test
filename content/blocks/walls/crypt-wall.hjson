@@ -2,7 +2,6 @@ type: Wall
 size: 1
 health: 100000000
 absorbsLasers: true
-destructible: false
 requirements: [
     crypt/1
 ]
