@@ -1,0 +1,8 @@
+type: Wall
+size: 1
+health: 100000000
+requirements: [
+    crypt/1
+]
+category: defense
+research: copper-wall
