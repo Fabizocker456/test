@@ -1,0 +1,8 @@
+name: "test"
+displayName: "Fabi's custom test mod"
+author: Fabizocker456
+description: "nope"
+version: "1.0"
+minGameVersion: "135"
+dependencies: [ ]
+hidden: true

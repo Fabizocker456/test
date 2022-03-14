@@ -1,0 +1,30 @@
+type: ItemTurret
+name: Trio
+description: "absolute pain"
+health: 700
+size: 1
+reloadTime: 10
+ammoUseEffect: casing3Double 
+shootSound: artillery
+inaccuracy: 0
+ammoPerShot: 1
+shots: 2
+alternate: true
+rotateSpeed: 2000000000
+targetGround: true
+targetAir: true
+ammoTypes: {
+	crypt: {
+		speed: 3
+		damage: 3200000
+		width: 8
+		height: 12
+		lifetime: 200
+        }
+    }          
+				
+requirements: [
+	copper/1
+]
+category: turret
+research: duo
