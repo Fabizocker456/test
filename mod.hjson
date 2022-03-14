@@ -1,7 +1,7 @@
 name: "test"
-displayName: "Fabi's custom test mod"
+displayName: "Just testing..."
 author: Fabizocker456
-description: "nope"
+description: "I am an extremely lazy person,\nabd therefore will not\nwrite a long description"
 version: "1.0"
 minGameVersion: "135"
 dependencies: [ ]
