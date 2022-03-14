@@ -1,6 +1,6 @@
 type: ItemTurret
 name: Trio
-description: "absolute pain"
+description: "absolute destruction"
 health: 700
 size: 1
 reloadTime: 10
@@ -20,11 +20,15 @@ ammoTypes: {
 		width: 8
 		height: 12
 		lifetime: 200
+		lightColor: 7fff7fff
+		absorbable: false
+		hittable: false
+		reflectable: false
         }
     }          
 				
 requirements: [
-	copper/1
+	crypt/1
 ]
 category: turret
 research: duo
