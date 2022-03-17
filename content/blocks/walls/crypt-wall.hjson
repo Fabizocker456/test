@@ -1,4 +1,5 @@
 type: Wall
+name: Cryptate wall
 size: 1
 health: 100000000
 absorbsLasers: true
