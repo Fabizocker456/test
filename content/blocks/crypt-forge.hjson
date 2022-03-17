@@ -20,5 +20,5 @@ requirements: [
     graphite/15
 ]
 category: crafting
-outputItem: crypt/100
+outputItem: crypt/5
 research: graphite-press
