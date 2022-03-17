@@ -1,4 +1,5 @@
 type: genericCrafter
+name: Cryptate Forge
 size: 2
 craftTime: 60
 hasPower: false
