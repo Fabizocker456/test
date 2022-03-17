@@ -1,0 +1,24 @@
+type: genericCrafter
+size: 2
+craftTime: 60
+hasPower: false
+hasLiquids: false
+consumes: {
+    items: {
+        items: [
+            copper/1
+            lead/1
+            sand/1
+        ]
+    }
+    power: 5
+}
+craftEffect: smokeCloud
+requirements: [
+    copper/50
+    lead/20
+    graphite/15
+]
+category: crafting
+outputItem: crypt/100
+research: graphite-press
