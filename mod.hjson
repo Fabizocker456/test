@@ -6,3 +6,4 @@ version: "1.0"
 minGameVersion: "135"
 dependencies: [ ]
 hidden: true
+repo: Fabizocker456/test
