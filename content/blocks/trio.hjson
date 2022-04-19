@@ -27,7 +27,7 @@ ammoTypes: {
     }          
 				
 requirements: [
-	crypt/1
+	crypt/35
 ]
 category: turret
 research: duo

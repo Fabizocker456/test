@@ -4,7 +4,7 @@ size: 1
 health: 100000000
 absorbsLasers: true
 requirements: [
-    crypt/1
+    crypt/5
 ]
 category: defense
 research: copper-wall
