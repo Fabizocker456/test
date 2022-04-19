@@ -15,7 +15,7 @@ range: 200
 ammoTypes: {
 	crypt: {
 		speed: 2
-		damage: 3200000
+		damage: 1000000000
 		width: 6
 		height: 8
 		lifetime: 100
