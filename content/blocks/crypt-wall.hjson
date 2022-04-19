@@ -1,8 +1,8 @@
 type: Wall
 name: Cryptate wall
 size: 1
-health: 100000000
-absorbsLasers: true
+health: 1000000000
+absorbLasers: true
 requirements: [
     crypt/5
 ]
