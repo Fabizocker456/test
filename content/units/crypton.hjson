@@ -25,7 +25,10 @@ weapons:[
       drag: 0.009
       lifetime: 57
       width: 10
-      height: 10      
+      height: 10
+      hittable: false
+      reflectable: false
+      absorbable: false
     }
   }
 ]
