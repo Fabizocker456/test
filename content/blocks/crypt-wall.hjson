@@ -1,7 +1,7 @@
 type: Wall
 name: Cryptate wall
 size: 1
-health: Infinity
+health: 2147483647
 absorbLasers: true
 requirements: [
     crypt/5
