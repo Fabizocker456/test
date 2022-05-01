@@ -20,7 +20,8 @@ weapons:[
     recoil: 1
     x: 7
     bullet: {
-      damage: 999999999
+      damage: Infinity
+      
     }
   }
 ]
