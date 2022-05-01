@@ -21,7 +21,11 @@ weapons:[
     x: 7
     bullet: {
       damage: Infinity
-      
+      speed: 2.5
+      drag: 0.009
+      lifetime: 57
+      width: 10
+      height: 10      
     }
   }
 ]
