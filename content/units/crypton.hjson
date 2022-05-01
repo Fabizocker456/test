@@ -1,6 +1,6 @@
 name: Crypton
 type: legs
-health: 1000000000
+health: Infinity
 speed: 0.57
 drag: 0.4
 hitSize: 13
