@@ -1,2 +1,26 @@
 name: Crypton
 type: legs
+health: 1000000000
+speed: 0.57
+drag: 0.4
+hitSize: 13
+rotateSpeed: 3
+legCount: 4
+legLength: 9
+legTrns: 0.6
+legMoveSpace: 1.4
+hovering: true
+visualElevation: 0.2
+weapons:[
+  {
+    name: encryption
+    top: false
+    shootY: 3
+    reload: 9
+    recoil: 1
+    x: 7
+    bullet: {
+      damage: 999999999
+    }
+  }
+]
