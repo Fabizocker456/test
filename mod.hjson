@@ -3,7 +3,7 @@ displayName: "Test mod"
 author: Fabizocker456
 description: "I am an extremely lazy person,\nand therefore will not\nwrite a long description"
 version: "1.0"
-minGameVersion: "135"
+minGameVersion: "136"
 dependencies: [ ]
 hidden: true
 repo: Fabizocker456/test
