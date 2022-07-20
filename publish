@@ -6,5 +6,5 @@ cmg="idk"
 echo "$cdc"
 
 git add *
-git commit -m "$cmg\n\n$cdc"
+git commit -m "$cmg" -m "$cdc"
 git push
