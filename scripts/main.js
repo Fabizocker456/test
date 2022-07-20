@@ -3,7 +3,7 @@ print("--- test mod setup");
 
 // scru dis!
 
-var cst = {""}
+var cst = {"key":"value"}
 
 Events.on(ContentInitEvent, ()=>{
 
