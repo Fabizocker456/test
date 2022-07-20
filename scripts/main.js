@@ -1,10 +1,7 @@
 // require("units/crypton");
 print("--- test mod setup");
 
-print(""+foc(Vars.content.items())["copper"])
-print(reg("test: [item:copper]"))
-
-// thanks, hoisting!
+// bad hoisting!
 
 function foc(o) {
   let arr = [];
@@ -37,4 +34,7 @@ function reg(t) {
   }
   return t
 }
+
+print(""+foc(Vars.content.items())["copper"])
+print(reg("test: [item:copper]"))
 print("---")
