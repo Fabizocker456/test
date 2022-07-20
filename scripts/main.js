@@ -1,5 +1,4 @@
 require("units/crypton");
-print("--- test mod setup");
 
 // scru dis!
 
@@ -19,7 +18,7 @@ Events.on(ContentInitEvent, ()=>{
 
   const reg = (t) => {
     let re = /\[(item|liquid|block|unit|effect|team):([a-z\-]+)\]/
-    let m = t.match(re)
+    let m = t.matchAll(re)
     print("string: '"+t+"', matches: "+m+"")
     if(m === null){return t;}
     for(let i=0;i<(m.length);i+=3){
@@ -51,5 +50,4 @@ Events.on(ContentInitEvent, ()=>{
   cst["foc"]=foc
 
   print(reg("test [item:copper] [unit:atrax] [item:copper]"))
-  print("---")
 })
