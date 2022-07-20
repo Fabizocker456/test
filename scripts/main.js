@@ -28,7 +28,7 @@ function foc(o) {
 
 function reg(t) {
   let re = /\[(item|liquid|block|unit|effect|team):([a-z\-])\]/
-  m = t.match(t)
+  let m = t.match(t)
   if(m === null){return t;}
   for(let i=0;i<(m.length);i+=3){
     typ = {item: items, liquid: liquids, block: blocks, unit: units,
