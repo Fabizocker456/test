@@ -23,7 +23,7 @@ const emo = (k,v) => {
 }
 
 const reg = (t) => {
-  re = /\[(item|liquid|block|unit|effect|team):([a-z\-])\]/
+  let re = new RegExp("\\[(item|liquid|block|unit|effect|team):(a-z\\-)\\]")
   return emo("item","copper")
 }
 
