@@ -12,7 +12,6 @@ const emo = (k,v) => {
   }
   if(Object.keys(basics).includes(k)){
     let ba = basics[k](v)
-    return ":"
     if(ba === null){return "[?]"}
     if(ba.minfo.mod !== null){return "[!]"}
     return ba.emoji().length ? ba.emoji() : "[.]"
