@@ -29,7 +29,7 @@ const emo = (d) => {
 }
 
 const reg = (t) => {
-  let re = /\[(?:item|liquid|block|unit|effect|team):(?:[a-z\-]+)\]/
+  let re = /\[[a-z]+:[a-z\-]+\]/
   for(let i = 0; i < t.length; i++){
     mt = t.match(re)
     if(!mt){break;}
