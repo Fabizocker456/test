@@ -4,6 +4,7 @@ cdc="$(fortune)"
 cmg="idk"
 
 echo "$cdc"
+echo "---"
 
 git add *
 git commit -m "$cmg" -m "$cdc"
