@@ -1,0 +1,33 @@
+type: ItemTurret
+name: Trio
+description: "absolute destruction"
+health: 700
+size: 1
+reloadTime: 10
+ammoUseEffect: casing3Double 
+shootSound: artillery
+inaccuracy: 0
+ammoPerShot: 1
+shots: 2
+alternate: true
+rotateSpeed: 2000000000
+range: 200
+ammoTypes: {
+	crypt: {
+		speed: 2
+		damage: Infinity
+		width: 6
+		height: 8
+		lifetime: 100
+		lightColor: 7fff7fff
+		absorbable: false
+		hittable: false
+		reflectable: false
+        }
+    }          
+				
+requirements: [
+	crypt/35
+]
+category: turret
+research: duo
