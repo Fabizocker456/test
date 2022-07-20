@@ -32,8 +32,8 @@ function reg(t) {
   print("string: '"+t+"', matches: ["+m+"]")
   if(m === null){return t;}
   for(let i=0;i<(m.length);i+=3){
-    typ = {item: items, liquid: liquids, block: blocks, unit: units,
-    effect: effects, team: teams}[m[i+1]];
+    let typ = {"item": items, "liquid": liquids, "block": blocks, "unit": units,
+    "effect": effects, "team": teams}[m[i+1]];
     val = m[i+2];
     if(!typ.keys().includes(val)){continue;}
     ico = typ[val];
