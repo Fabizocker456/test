@@ -29,13 +29,13 @@ const emo = (d) => {
 }
 
 const reg = (t) => {
-  let re = /\[[a-z]+:[a-z\-]+\]/
+/*  let re = /\[[a-z]+:[a-z\-]+\]/
   for(let i = 0; i < t.length; i++){
     mt = t.match(re)
     if(!mt){break;}
     t = t.replace(mt, emo(mt))
   }
-  return t
+  */return t
 }
 
 Events.on(ContentInitEvent, ()=>{
