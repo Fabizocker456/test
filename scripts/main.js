@@ -1,6 +1,7 @@
 // require("units/crypton");
 print("--- test mod setup");
 
+print(""+foc(Vars.content.items())["copper"])
 print(reg("test: [item:copper]"))
 
 // thanks, hoisting!
