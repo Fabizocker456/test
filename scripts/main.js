@@ -1,6 +1,6 @@
 // require("units/crypton");
-print("test mod setup");
-/*
+print("--\ntest mod setup");
+
 var items = foc( Vars.content.items() );
 var liquids = foc( Vars.content.liquids() )
 var blocks = foc( Vars.content.blocks() );
@@ -40,4 +40,4 @@ function reg(t) {
   }
   return t
 }
-*/print("test_f")
+print("---")
