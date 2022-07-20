@@ -22,7 +22,7 @@ function reg(t) {
   if(m === null){return t;}
   for(let i=0;i<(m.length);i+=3){
     let styp = m[i+1]
-    print("type: ",styp)
+    print("type: "+styp)
     let typ = {
       "item": foc(Vars.content.items()),
       "liquid": foc(Vars.content.liquids())
