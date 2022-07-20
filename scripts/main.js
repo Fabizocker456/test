@@ -35,7 +35,9 @@ function reg(t) {
     let styp = m[i+1]
     print("type: ",styp)
     let typ = {"item": items, "liquid": liquids, "block": blocks, "unit": units,
-    "effect": effects, "team": teams}[styp];
+    "effect": effects, "team": teams};
+    if(!typ.keys().includes(styp)){continue;}
+    typ = typ[styp];
     let val = m[i+2];
     if(!typ.keys().includes(val)){continue;}
     let ico = typ[val];
