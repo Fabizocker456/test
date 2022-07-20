@@ -28,7 +28,7 @@ function reg(t) {
       "item": foc(Vars.content.items()),
       "liquid": foc(Vars.content.liquids())
     }
-    if(!Object.keys(typ).includes(styp)){continue;}
+//    if(!Object.keys(typ).includes(styp)){continue;}
     let ctyp = typ[styp];
     let val = m[i+2];
     if(!Object.keys(ctyp).includes(val)){continue;}
