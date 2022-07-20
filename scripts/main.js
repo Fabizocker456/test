@@ -34,9 +34,9 @@ function reg(t) {
   for(let i=0;i<(m.length);i+=3){
     let typ = {"item": items, "liquid": liquids, "block": blocks, "unit": units,
     "effect": effects, "team": teams}[m[i+1]];
-    val = m[i+2];
+    let val = m[i+2];
     if(!typ.keys().includes(val)){continue;}
-    ico = typ[val];
+    let ico = typ[val];
     t = t.replaceAll(m[i], ico);
   }
   return t
