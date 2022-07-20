@@ -27,7 +27,7 @@ function foc(o) {
 }
 
 function reg(t) {
-  let re = /\[(item|liquid|block|unit|effect|team):([a-z\-])\]/
+  let re = /\[(item|liquid|block|unit|effect|team):.*\]/
   let m = t.match(t)
   print("string: '"+t+"', matches: ["+m+"]")
   if(m === null){return t;}
