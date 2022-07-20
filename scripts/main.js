@@ -1,5 +1,5 @@
 // require("units/crypton");
-print("---\ntest mod setup");
+print("--- test mod setup");
 
 print(reg("test: [item:copper]"))
 
@@ -18,7 +18,7 @@ function foc(o) {
 function reg(t) {
   let re = /\[(item|liquid|block|unit|effect|team):([a-z\-]+)\]/
   let m = t.match(re)
-  print("string: '"+t+"', matches: ["+m+"]")
+  print("string: '"+t+"', matches: "+m+"")
   if(m === null){return t;}
   for(let i=0;i<(m.length);i+=3){
     let styp = m[i+1]
