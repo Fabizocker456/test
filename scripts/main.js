@@ -1,18 +1,6 @@
 // require("units/crypton");
 print("--\ntest mod setup");
 
-var items = foc( Vars.content.items() );
-var liquids = foc( Vars.content.liquids() )
-var blocks = foc( Vars.content.blocks() );
-var units = foc( Vars.content.units() );
-var effects = foc( Vars.content.statusEffects() );
-var teams = {
-  "sharded" :Team.sharded.icon,
-  "crux"    :Team.crux.icon,
-  "malis"   :Team.malis.icon,
-  "derelict":Team.derelict.icon
-};
-
 print(reg("test: [item:copper]"))
 
 // thanks, hoisting!
@@ -34,8 +22,10 @@ function reg(t) {
   for(let i=0;i<(m.length);i+=3){
     let styp = m[i+1]
     print("type: ",styp)
-    let typ = {"item": items, "liquid": liquids, "block": blocks, "unit": units,
-    "effect": effects, "team": teams};
+    let typ = {
+      "item": foc(Vars.content.items()),
+      "liquid": foc(Vars.content.liquids())
+    }
     if(!Object.keys(typ).includes(styp)){continue;}
     typ = typ[styp];
     let val = m[i+2];
