@@ -32,7 +32,7 @@ function reg(t) {
     let val = m[i+2];
     if(!Object.keys(ctyp).includes(val)){continue;}
     let ico = ctyp[val];
-    t = t.replaceAll(m[i], ico);
+    t = t.replace(m[i], ico);
   }
   return t
 }
