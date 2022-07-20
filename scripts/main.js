@@ -2,12 +2,7 @@
 
 var cst = {"key":"value"}
 
-const emo = (d) => {
-  return "[°-°]"
-  d = d.slice(1, d.length - 1)
-  d = d.split(":")
-  let k = d[0]
-  let v = d[1]
+const emo = (k,v) => {
   let basics = {
     "item": Vars.content.item,
     "liquid": Vars.content.liquid,
@@ -30,13 +25,7 @@ const emo = (d) => {
 }
 
 const reg = (t) => {
-  let re = /\[[a-z]+:[a-z\-]+\]/
-  for(let i = 0; i < t.length; i++){
-    mt = t.match(re)
-    if(!mt){break;}
-    t = t.replace(mt, emo(mt))
-  }
-  return t
+  return emo("item","copper")
 }
 
 Events.on(ContentInitEvent, ()=>{
