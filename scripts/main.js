@@ -21,7 +21,7 @@ function foc(o) {
   let arr = [];
   o.each(i=>arr.push(i));
   arr = arr.filter(o=>(o.minfo.mod === null));
-  obj = {};
+  let obj = {};
   arr = arr.map(o=>[o.name, o.emoji()]);
   arr.forEach(o=>{obj[o[0]] = o[1]});
 }
