@@ -20,7 +20,7 @@ Events.on(ContentInitEvent, ()=>{
     while(1){
       let lt = t
       let lm = lt.match(re)
-      if(lm){lm.forEach(m.push)}
+      if(lm){lm.forEach(m.push); lt = lt.replace(lm[0], "")}
       else{break}
     }
     print("string: '"+t+"', matches: "+m+"")
