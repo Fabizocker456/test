@@ -1,4 +1,10 @@
 #/usr/bin/bash
+
+cdc="$(fortune)"
+cmg="idk"
+
+echo "$cdc"
+
 git add *
-git commit -m "idk" -m "$(fortune)"
+git commit -m "$cmg\n\n$cdc"
 git push
