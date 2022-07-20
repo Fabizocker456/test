@@ -4,10 +4,10 @@ var cst = {"key":"value"}
 
 const emo = (k,v) => {
   let basics = {
-    "item": Vars.content.item,
+    "item": o=>Vars.content.item(o),
     "liquid": Vars.content.liquid,
     "block": Vars.content.block,
-    "unit": Vars.content.unit,
+    "unit": o=>Vars.content.unit(o),
     "effect": Vars.content.statusEffect
   }
   if(Object.keys(basics).includes(k)){
