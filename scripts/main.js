@@ -5,10 +5,10 @@ var cst = {"key":"value"}
 const emo = (k,v) => {
   let basics = {
     "item": o=>Vars.content.item(o),
-    "liquid": Vars.content.liquid,
-    "block": Vars.content.block,
+    "liquid": o=>Vars.content.liquid(o),
+    "block": o=>Vars.content.block(o),
     "unit": o=>Vars.content.unit(o),
-    "effect": Vars.content.statusEffect
+    "effect": o=>Vars.content.statusEffect(o)
   }
   if(Object.keys(basics).includes(k)){
     let ba = basics[k](v)
@@ -16,13 +16,14 @@ const emo = (k,v) => {
     if(ba.minfo.mod !== null){return "[!]"}
     return ba.emoji().length ? ba.emoji() : "[.]"
   }
-  teams = {"sharded": Team.sharded, "crux":Team.crux,
-  "malis":Team.malis, "derelict":Team.derelict}
+  teams = {"sharded": Team.sharded.emoji, "crux":Team.crux.emoji,
+  "malis":Team.malis.emoji, "derelict":Team.derelict.emoji}
   if(!Object.keys(teams).includes(v)){return "[?]"}
-  return teams[v].emoji
+  return teams[v]
 }
 
 const reg = (t) => {
+  re = /\[(item|liquid|block|unit|effect|team):([a-z\-])\]/
   return emo("item","copper")
 }
 
