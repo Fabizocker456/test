@@ -1,5 +1,5 @@
 // require("units/crypton");
-print("--\ntest mod setup");
+print("---\ntest mod setup");
 
 print(reg("test: [item:copper]"))
 
@@ -12,6 +12,7 @@ function foc(o) {
   let obj = {"nil":"•"};
   arr = arr.map(o=>[o.name, o.emoji()]);
   arr.forEach(o=>{obj[o[0]] = o[1]});
+  return obj;
 }
 
 function reg(t) {
@@ -27,10 +28,10 @@ function reg(t) {
       "liquid": foc(Vars.content.liquids())
     }
     if(!Object.keys(typ).includes(styp)){continue;}
-    typ = typ[styp];
+    let ctyp = typ[styp];
     let val = m[i+2];
-    if(!Object.keys(typ).includes(val)){continue;}
-    let ico = typ[val];
+    if(!Object.keys(ctyp).includes(val)){continue;}
+    let ico = ctyp[val];
     t = t.replaceAll(m[i], ico);
   }
   return t
