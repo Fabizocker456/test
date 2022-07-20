@@ -30,7 +30,7 @@ const emo = (d) => {
 
 const reg = (t) => {
   let re = /\[(?:item|liquid|block|unit|effect|team):(?:[a-z\-]+)\]/
-  for(let i = 0; i < t.length, i++){
+  for(let i = 0; i < t.length; i++){
     mt = t.match(re)
     if(!mt){break;}
     t = t.replace(mt, emo(mt))
