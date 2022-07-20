@@ -1,32 +1,36 @@
 // scru dis!
 
-var cst = {"key":"value"}
-
-const emo = (k,v) => {
-  let basics = {
-    "item": o=>Vars.content.item(o),
-    "liquid": o=>Vars.content.liquid(o),
-    "block": o=>Vars.content.block(o),
-    "unit": o=>Vars.content.unit(o),
-    "effect": o=>Vars.content.statusEffect(o)
-  }
-  if(Object.keys(basics).includes(k)){
-    let ba = basics[k](v)
-    if(ba === null){return "[?]"}
-    if(ba.minfo.mod !== null){return "[!]"}
-    return ba.emoji().length ? ba.emoji() : "[.]"
-  }
-  teams = {"sharded": Team.sharded.emoji, "crux":Team.crux.emoji,
-  "malis":Team.malis.emoji, "derelict":Team.derelict.emoji}
-  if(!Object.keys(teams).includes(v)){return "[?]"}
-  return teams[v]
-}
+var cst = {"[nil]":"•"}
 
 const reg = (t) => {
-  let re = new RegExp("\\[(item|liquid|block|unit|effect|team):(a-z\\-)\\]")
-  return emo("item","copper")
+  let rep = (s, a, b) => {while(s.includes(a)){s = s.replace(a, b)}return s}
+  let map = Object.keys(cst)
+  for(let i=0;i<map.length;i++){
+    t = rep(t, map[i], cst[map[i]])
+  }
+  return t
 }
 
 Events.on(ContentInitEvent, ()=>{
+
+  let moj = (cst, seq, pref) => {
+    let arr = []
+    seq.each(a=>arr.push(a))
+    arr = arr.filter(o=>o.minfo.mod === null)
+    arr.forEach(o=>{
+      cst["["+pref+":"+o.name+"]"] = o.icon()
+    })
+  }
+
+  moj(cst, Vars.content.items(), "item")
+  moj(cst, Vars.content.units(), "unit")
+  moj(cst, Vars.content.liquids(), "liquid")
+  moj(cst, Vars.content.blocks(), "block")
+  moj(cst, Vars.content.statusEffects(), "effect")
+  cst["[team:sharded]"]=Team.sharded.icon
+  cst["[team:crux]"]=Team.crux.icon
+  cst["[team:malis]"]=Team.malis.icon
+  cst["[team:derelict]"]=Team.derelict.icon
+
   print(reg("test [item:copper] [unit:atrax] [item:copper]"))
 })
