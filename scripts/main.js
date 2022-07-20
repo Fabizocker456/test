@@ -52,5 +52,4 @@ Events.on(ContentInitEvent, ()=>{
 
   print(reg("test [item:copper] [unit:atrax] [item:copper]"))
   print("---")
-}
-
+})
