@@ -18,9 +18,15 @@ Events.on(ContentInitEvent, ()=>{
 
   const reg = (t) => {
     let re = /\[(item|liquid|block|unit|effect|team):([a-z\-]+)\]/
-    let m = t.matchAll(re)
+    let m = [];
+    while(1){
+      let lt = t
+      let lm = lt.match(re)
+      if(lm){lm.forEach(m.push)}
+      else{break}
+    }
     print("string: '"+t+"', matches: "+m+"")
-    if(m === null){return t;}
+    if(!m){return t;}
     for(let i=0;i<(m.length);i+=3){
       let styp = m[i+1]
       print("type: "+styp)
