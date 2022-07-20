@@ -36,10 +36,10 @@ function reg(t) {
     print("type: ",styp)
     let typ = {"item": items, "liquid": liquids, "block": blocks, "unit": units,
     "effect": effects, "team": teams};
-    if(!typ.keys().includes(styp)){continue;}
+    if(!Object.keys(typ).includes(styp)){continue;}
     typ = typ[styp];
     let val = m[i+2];
-    if(!typ.keys().includes(val)){continue;}
+    if(!Object.keys(typ).includes(val)){continue;}
     let ico = typ[val];
     t = t.replaceAll(m[i], ico);
   }
