@@ -3,6 +3,7 @@
 var cst = {"key":"value"}
 
 const emo = (k,v) => {
+  return ":)"
   let basics = {
     "item": Vars.content.item,
     "liquid": Vars.content.liquid,
