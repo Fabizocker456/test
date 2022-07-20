@@ -11,8 +11,8 @@ const emo = (k,v) => {
     "effect": Vars.content.statusEffect
   }
   if(Object.keys(basics).includes(k)){
-    return ""
     let ba = basics[k](v)
+    return ":"
     if(ba === null){return "[?]"}
     if(ba.minfo.mod !== null){return "[!]"}
     return ba.emoji().length ? ba.emoji() : "[.]"
