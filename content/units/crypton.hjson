@@ -14,7 +14,7 @@ legMoveSpace: 1.4
 hovering: true
 visualElevation: 0.2
 
-weapons:[
+weapons: [
   {
     name: encryption
     top: false
