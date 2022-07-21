@@ -18,7 +18,7 @@ Events.on(ContentInitEvent, () => {
       seq.each(a => arr.push(a))
       arr = arr.filter(o => o.minfo.mod === null)
       arr.forEach(o => {
-        cst["[" + pref + ":" + o.name + "]"] = o.icon()
+        cst["[" + pref + ":" + o.name + "]"] = o.emoji()
       })
     }
 
@@ -27,11 +27,11 @@ Events.on(ContentInitEvent, () => {
     moj(cst, Vars.content.liquids(), "liquid")
     moj(cst, Vars.content.blocks(), "block")
     moj(cst, Vars.content.statusEffects(), "effect")
-    cst["[team:sharded]"] = Team.sharded.icon
-    cst["[team:crux]"] = Team.crux.icon
-    cst["[team:malis]"] = Team.malis.icon
-    cst["[team:derelict]"] = Team.derelict.icon
+    cst["[team:sharded]"] = Team.sharded.emoji
+    cst["[team:crux]"] = Team.crux.emoji
+    cst["[team:malis]"] = Team.malis.emoji
+    cst["[team:derelict]"] = Team.derelict.emoji
 
     print(reg("test [item:copper] [unit:atrax] [item:copper]"))
-  } catch { }
+  } catch { print("ERROR, terminating...") }
 })
