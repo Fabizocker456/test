@@ -33,5 +33,5 @@ Events.on(ContentInitEvent, () => {
     cst["[team:derelict]"] = Team.derelict.emoji
 
     print(reg("test [item:copper] [unit:atrax] [item:copper]"))
-  } catch { print("ERROR, terminating...") }
+  } catch (e){ print("ERROR, terminating...") }
 })
