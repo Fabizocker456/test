@@ -12,7 +12,7 @@ const reg = (t) => {
 }
 
 Events.on(ContentInitEvent, () => {
-  try {
+    "yeet"()
     let moj = (cst, seq, pref) => {
       let arr = []
       seq.each(a => arr.push(a))
@@ -33,5 +33,4 @@ Events.on(ContentInitEvent, () => {
     cst["[team:derelict]"] = Team.derelict.emoji
 
     print(reg("test [item:copper] [unit:atrax] [item:copper]"))
-  } catch (e){ print("ERROR, terminating...") }
 })
