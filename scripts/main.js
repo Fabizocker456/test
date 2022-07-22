@@ -12,7 +12,6 @@ const reg = (t) => {
 }
 
 Events.on(ContentInitEvent, () => {
-    "yeet"()
     let moj = (cst, seq, pref) => {
       let arr = []
       seq.each(a => arr.push(a))
