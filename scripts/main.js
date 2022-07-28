@@ -33,3 +33,7 @@ Events.on(ContentInitEvent, () => {
 
     print(reg("test [item:copper] [unit:atrax] [item:copper]"))
 })
+
+Events.on(PlayerChatEvent, e=>{
+  print(reg(e.message))
+})
